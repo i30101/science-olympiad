@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SO Tools</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">i30101's SO tools</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Fermi Questions</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled">Codebusters</a>
+            </li>
+            </ul>
+            <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+        </div>
+    </nav>    
+
+    <div class="container" id="main">
+        <section class="text-center" id="jumbotron">
+            <div class="container">
+                <h1 class="jumbotron-heading">Fermi Questions Problem Generator</h1>
+            </div>
+        </section>
+
+        <div class="container text-center bg-light" id="problem-container">
+            <h3 class="label">Problem:</h3>
+            <h6 class="text" id="problem">
+                Your problem 
+            </h1>
+            <h3 class="label">Answer:</h3>
+            <h6 class="text" id="answer">
+                Your answer
+            </h1>
+            <button type="button" class="btn btn-primary input" id="newProblem" onclick="newProblem()">New Problem</button>
+            <button type="button" class="btn btn-secondary input" id="newProblem" onclick="showAnswer()">Show Answer</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
