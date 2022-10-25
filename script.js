@@ -2,17 +2,9 @@ let problemText = document.getElementById("problem");
 let answerText = document.getElementById("answer");
 
 class Tools {
-    genRand() {
-        return Math.floor(Math.random() * 10000) / 100;
-    }
-
-    updateProblem(problem) {
-        problemText.innerHTML = problem;
-    }
-
-    updateAnswer(answer) {
-        answerText.innerHTML = answer;
-    }
+    genRand() {return Math.floor(Math.random() * 10000) / 100; }
+    updateProblem(problem) {problemText.innerHTML = problem; }
+    updateAnswer(answer) {answerText.innerHTML = answer; }
 }
 
 let tools = new Tools();
@@ -71,25 +63,31 @@ function showAnswer() {
 
 
 
-// let sportsFields = [];
-// class SportsField {
-//     constructor(name, length, width) {
-//         this.name = name;
-//         this.length = length;
-//         this.width = width;
-//         sportsFields.push(this);
-//     }
-// }
-// new SportsField("NBA basketball field", 28.7, 15.2);
-// new SportsField("Olympic swimming pool", 50, 25);
-// new SportsField("field hockey field", 91.4, 55);
-// new SportsField("lacrosse field", 100, 55);
-// new SportsField("American football field", 110, 48.75);
-// new SportsField("baseball field", 21, 21);
-// new SportsField("ultimate frisbee field", 110, 37);
-// new SportsField("badminton court", 13.4, 6.1);
-// new SportsField("tennis singles court", 23.77, 8.23);
-// new SportsField("tennis doubles court", 23.77, 10.97);
+class SportsField {
+    constructor() {
+        this.name, this.width, this.length;
+        this.names = [
+            "NBA basketball field", "Olympic swimming pool", 
+            "field hockey field", "lacross field", 
+            "American footbal field", "baseball field", 
+            "ultimate frisbee field", "badminton court", 
+            "tennis singles court", "tennis doubles court"
+        ];
+        this.lengths = [15.2, 25, 55, 55, 48.75, 21, 37, 6.1, 8.23, 10.97];
+        this.widths = [28.7, 50, 91.4, 100, 110, 21, 110, 13.4, 23.77, 23.77];
+    }
+
+    randField() {
+        return Math.floor(Math.random() * this.names.length);
+    }
+
+    pickField() {
+        this.name = names[this.randField()];
+        this.lenghts = names[this.randField()];
+        this.widths = names[this.randField()];
+    }    
+}
+
 
 
 
