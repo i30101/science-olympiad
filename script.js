@@ -62,6 +62,7 @@ function newProblem() {
     inUnit = metric.randUnit();
     outUnit = metric.randUnit();
     tools.updateProblem(`How many ${outUnit} are in ${randValue} ${inUnit}?`);
+    tools.updateAnswer(" ");
 }
 
 function showAnswer() {
