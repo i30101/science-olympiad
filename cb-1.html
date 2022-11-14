@@ -5,13 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SO Tools</title>
+    <link rel="icon" type="image/x-icon" href="images/scilympiad.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="stylesheet" href="cb-1.css">
+    <link rel="stylesheet" href="codebusters.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg" id="navbar">
         <div class="container-fluid">
-        <a class="navbar-brand" href="#">i30101's SO Tools</a>
+        <a class="navbar-brand" href="index.html">i30101's SO Tools</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -19,9 +20,6 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                     <a class="nav-link" href="fermi.html">Fermi Questions</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled">Codebusters</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="cb-1.html">Codebusters Test 1</a>
@@ -33,9 +31,18 @@
     </nav>
 
     <div class="container" id="main">
-        <div class="container" id="content">
-            
+        <div class="container" id="intro">
+            <div class="bold-text">14 November 2022: Codebusters Practice Test 1</div>
+            <hr>
+            <div class="normal-text">Each competitor is allowed one four-function calculator and writing utensils. Scratch paper will and a reference sheet will be provided for all competitors. Teams will have 50 minutes. Feel free to ask your proctors any questions.</div>
+            <hr>
+            <button type="button" class="btn btn-success" id="start" onclick="start(true)">Start Test</button>
+            <hr>
         </div>
+        <div class="container whitespace"></div>
+        <div class="container" id="problems"></div>
     </div>
+
+    <script src="codebusters.js"></script>
 </body>
 </html>
