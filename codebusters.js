@@ -1,4 +1,5 @@
 let problems = document.getElementById("problems");
+let buttonContainer = document.getElementById("button-container");
 let ciphers = [
     ["Aristocrat",   150,    "Decrypt this aristocrat talking about one of the best times to enjoy some music.",                                     "WMADSEADW E LUK ZPWS WES MPSWEGD MR SFD VPEIGEKB UKG NDIUT EK SFD IUJK. SFDND UND WM AUKH SFEKBW SM GM EK KUSPND."],
     ["Vigenere",     250,    "Decode this quote that was encoded with the key CENTAUR.",                                                             "UXNK SNRT WUBNCEI FEBGBK KR GAE YOREALE IW VLR GIAYV AUTT NVNIFVOJV QV ATKYU GCR VOOCF WRX TBP DVVZHN MCVVXTS"],
@@ -22,8 +23,9 @@ let ciphers = [
     ["Rail",         300,    "A quote has been encoded using the Rail Fence Cipher. 3 rails were used.",                                             "NONCTOUGFDEOMECAEOYUADNEIHEROCNEOFYACFOR’FNDNIGLNWCAWMYATMNLIIANO"]
 ]
 
+let notStarted = true;
 function start(canStart) {
-    if(canStart) {
+    if(canStart && notStarted) {
         for(let i = 0; i < ciphers.length; i++) {
             let problem = ciphers[i];
             let type = problem[0];
@@ -36,11 +38,12 @@ function start(canStart) {
                     ${i + 1}. ${type} (${points} points) <br> ${question}
                 </div>
                 <div class=\"cipher\">${text}</div>
-            </div>
-            `
+            </div>`
+            notStarted = false;
+            buttonContainer.innerHTML = "";
         }
     }else {
-        problems.innerHTML += `<div class=\"bold-text\">You cannot start this test.</div>
+        problems.innerHTML = `<div class=\"bold-text\">You cannot start this test yet. Contact your test proctors for help.</div>
         `
     }
 }
