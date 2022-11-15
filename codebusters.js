@@ -21,7 +21,7 @@ let ciphers = [
     ["Porta",        300,    "The following quote by Heraclitus needs to be decoded with the Porta Cipher with a keyword of THINK.",                 "XUTT CJUZ ANJC KBIX UPOW MQSR WKXV AMLD YIXK UJXA YQLX AXUZ HYTK KDI"],
     ["Aristocrat",   125,    "Solve this aristocrat about birds.",                                                                                   "DHBDE CDRBCYDIRBKE BC DE BAUKQRDER AORQBI KY RVO CSIIOCC KY RVBC RKSQEDAOER."],
     ["Rail",         300,    "A quote has been encoded using the Rail Fence Cipher. 3 rails were used.",                                             "N O N C T O U G F D E O M E C A E O Y U A D N E I H E R O C N E O F Y A C F O R ’ F N D N I G L N W C A W M Y A T M N L I I A N O"]
-]
+];
 
 let notStarted = true;
 function start(canStart) {
