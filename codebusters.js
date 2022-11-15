@@ -43,8 +43,7 @@ function start(canStart) {
             buttonContainer.innerHTML = "";
         }
     }else {
-        problems.innerHTML = `<div class=\"bold-text\">You cannot start this test yet. Contact your test proctors for help.</div>
-        `
+        problems.innerHTML = `<div class=\"bold-text\">You cannot start this test yet. Contact your test proctors for help.</div>`
     }
 }
 
