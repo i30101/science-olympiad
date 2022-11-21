@@ -1,5 +1,6 @@
 let problems = document.getElementById("problems");
 let buttonContainer = document.getElementById("button-container");
+
 let test1 = [
     ["Aristocrat",   150,    "Decrypt this aristocrat talking about one of the best times to enjoy some music.",                                     "WMADSEADW E LUK ZPWS WES MPSWEGD MR SFD VPEIGEKB UKG NDIUT EK SFD IUJK. SFDND UND WM AUKH SFEKBW SM GM EK KUSPND."],
     ["Vigenere",     250,    "Decode this quote that was encoded with the key CENTAUR.",                                                             "UXNK SNRT WUBNCEI FEBGBK KR GAE YOREALE IW VLR GIAYV AUTT NVNIFVOJV QV ATKYU GCR VOOCF WRX TBP DVVZHN MCVVXTS"],

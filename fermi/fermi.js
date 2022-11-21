@@ -51,7 +51,6 @@ function start(action) {
     }else {
         problems.innerHTML = `<div class=\"bold-text\">System error. Contact your test proctors for help.</div>`;
     }
-    
 }
 
 function showTest(test) {
