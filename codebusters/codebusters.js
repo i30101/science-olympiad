@@ -1,6 +1,6 @@
 let problems = document.getElementById("problems");
 let buttonContainer = document.getElementById("button-container");
-let ciphers = [
+let test1 = [
     ["Aristocrat",   150,    "Decrypt this aristocrat talking about one of the best times to enjoy some music.",                                     "WMADSEADW E LUK ZPWS WES MPSWEGD MR SFD VPEIGEKB UKG NDIUT EK SFD IUJK. SFDND UND WM AUKH SFEKBW SM GM EK KUSPND."],
     ["Vigenere",     250,    "Decode this quote that was encoded with the key CENTAUR.",                                                             "UXNK SNRT WUBNCEI FEBGBK KR GAE YOREALE IW VLR GIAYV AUTT NVNIFVOJV QV ATKYU GCR VOOCF WRX TBP DVVZHN MCVVXTS"],
     ["Pollux",       200,    "Decode this quote; you are given that 0=●, 1=×, 2=–, 5=●, 7=×, 9=×.",                                                  "4   0   6   4   9   4   3   8   9   1   6   6   3   9   6   6   2   7   9   8   5   4   5   7   3   2   9   0   2   0   3   1   0   6   3   4   7   2   8   8   1   8   8   6   1   6   5   7   5   4   5   1   9   3   8   3   1   8   8   6   9   8   3   4   1   4   1   7   5   6   8   6   7   0   7   8   9   9   4   5   5   1   2   1   3   2   3   1   3   7   4   8   7   6   2   1   3   0   5   1   1   8   9   6   6   2   1   7   8   5   2   3   7   2   8   2   1   2   0   9   6   0   5   1   3   0   8   7   6   4   8   5   9   8   9   7   5   6   3   3   1   2   2   6   7   6   4   7   6   6   3   7   1   4   6   0   1   5   6   1   2   4   7   6   8   5   9   3   9   2   4   4   7   9   0   8   9   8   1   2   9   5   2   9   6   3   6   0   9   8   5   8   9   5   4   5"],
@@ -24,10 +24,21 @@ let ciphers = [
 ];
 
 let notStarted = true;
-function start(canStart) {
-    if(canStart && notStarted) {
-        for(let i = 0; i < ciphers.length; i++) {
-            let problem = ciphers[i];
+function start(action) {
+    if(action == 0) {
+        problems.innerHTML = `<div class=\"bold-text\">You cannot start this test yet. Contact your test proctors for help.</div>`;
+    }else if(action == 1) {
+        showTest(test1);
+    }else {
+        problems.innerHTML = `<div class=\"bold-text\">System error. Contact your test proctors for help.</div>`;
+    }
+    
+}
+
+function showTest(test) {
+    if(notStarted) {
+        for(let i = 0; i < test.length; i++) {
+            let problem = test[i];
             let type = problem[0];
             let points = problem[1];
             let question = problem[2]
@@ -42,8 +53,5 @@ function start(canStart) {
             notStarted = false;
             buttonContainer.innerHTML = "";
         }
-    }else {
-        problems.innerHTML = `<div class=\"bold-text\">You cannot start this test yet. Contact your test proctors for help.</div>`
     }
 }
-
