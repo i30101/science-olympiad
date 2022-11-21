@@ -40,7 +40,7 @@ test1 = [
     "How many AA Batteries would it take to provide the electrical power to a town of 100,000 for a day?",
     "How many electrons in a mole of neutral water?",
     "How many rotations does the axle of a car make during a 2-mile commute?",   
-]
+];
 
 let notStarted = true;
 function start(action) {
