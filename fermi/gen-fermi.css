@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+}
+
+#jumbotron {
+    margin: 50px;
+}
+
+#problem-container {
+    width: 600px;
+    height: 375px;
+    margin: auto;
+    padding: 30px;
+}
+
+.label {
+    margin-bottom: 20px;;
+}
+
+.text {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    height: 40px;
+}
+
+.input {
+    width: 100px;
+    margin: 20px;
+}

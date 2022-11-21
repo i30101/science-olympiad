@@ -1,29 +1,71 @@
 * {
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-#jumbotron {
-    margin: 50px;
+body {
+    background-color: #f7f7f7;
 }
 
-#problem-container {
-    width: 600px;
-    height: 375px;
-    margin: auto;
-    padding: 30px;
+hr {
+    margin: 10px 1%;
 }
 
-.label {
-    margin-bottom: 20px;;
-}
-
-.text {
-    margin-top: 10px;
-    margin-bottom: 20px;
+.whitespace {
     height: 40px;
 }
 
-.input {
-    width: 100px;
-    margin: 20px;
+.bold-text {
+    padding: 5px;
+    font-weight: 600;
+}
+
+.normal-text {
+    padding: 5px;
+}
+
+.btn {
+    width: 160px !important;
+    margin: 10px 20px;
+}
+
+#navbar {
+    background-color: #00008b;
+}
+
+.navbar-brand, .nav-link, .nav-link:hover, .nav-link:active {
+    color: white !important;
+}
+
+#main {
+    margin: 0 10%;
+    padding: 20px;
+    max-width: none;
+    width: 80%;
+    background-color: white;
+}
+
+#intro {
+    text-align: center;
+}
+
+.problem {
+    margin: 10px 2% 50px 2%;
+    padding: 0;
+    width: 96%;
+    background-color: white;
+    border: 1px solid #c9c9c9;
+    border-radius: 8px;
+}
+
+.question, .cipher {
+    margin: 0;
+    padding: 10px;
+
+}
+
+.question {
+    background-color: #f7f7f7;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 }
