@@ -3,7 +3,7 @@ let buttonContainer = document.getElementById("button-container");
 
 test1 = [
     "How many college students in the United States have blue eyes?",
-    "Of the students in question fourteen, how many will major in science or engineering?",
+    "Of the students in the previous question, how many will major in science or engineering?",
     "How many feathers are removed from turkeys for one year’s Thanksgiving in the United States?",
     "Using just the letters in the alphabet, how many unique 26-letter sequences are possible?",
     "How many nucleons flow down the drain during an average shower?",
