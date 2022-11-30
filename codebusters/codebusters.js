@@ -49,7 +49,7 @@ function showTest(test) {
                 <div class=\"question bold-text\">
                     ${i + 1}. ${type} (${points} points) <br> ${question}
                 </div>
-                <div class=\"cipher\">${text}</div>
+                <div class=\"question-text\">${text}</div>
             </div>`
             notStarted = false;
             buttonContainer.innerHTML = "";

@@ -58,7 +58,7 @@ hr {
     border-radius: 8px;
 }
 
-.question, .cipher {
+.question, .question-text {
     margin: 0;
     padding: 10px;
 

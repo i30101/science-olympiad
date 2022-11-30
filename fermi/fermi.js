@@ -59,7 +59,7 @@ function showTest(test) {
             problems.innerHTML += `
             <div class=\"container problem\" id=\"problems\">
                 <div class=\"question bold-text\">${i + 1}. (5.00 points)</div>
-                <div class=\"cipher\">${test[i]}</div>
+                <div class=\"question-text\">${test[i]}</div>
             </div>`
             notStarted = false;
             buttonContainer.innerHTML = "";
