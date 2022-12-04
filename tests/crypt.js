@@ -1,5 +1,43 @@
-let problems = document.getElementById("problems");
-let buttonContainer = document.getElementById("button-container");
+String.prototype.toHex = function() {
+    let result = "";
+    for(let i = 0; i < this.length; i++) {
+        result += ("000" + this.charCodeAt(i).toString(16)).slice(-4);
+    }
+    return result;
+}
+
+String.prototype.fromHex = function() {
+    console.log("print "+ this);
+    let hexes = this.match(/.{1, 4}/g) || [];
+    let back = "";
+    for(let i = 0; i < hexes.length; i++) {
+        back += String.fromCharCode(parseInt(hexes[i], 16));
+    }
+    console.log(back);
+    return back;
+}
+
+function hexEncode(str) {
+    let encoded = "";
+    let letters = str.split("");
+    for(let letter of letters) {
+        encoded += letter.toHex();
+    }
+    return encoded;
+}
+
+function hexDecode(str) {
+    let decoded = "";
+    let hexes = str.match(/.{1, 4}/g) || [];
+    console.log(hexes);
+    for(let hex of hexes) {
+        // console.log(hex);
+        decoded += hex.fromHex();
+    }
+    return decoded;
+}
+
+
 
 let test1 = [
     [1, "The atomic clock invented after the quartz clock."],
@@ -24,29 +62,11 @@ let test1 = [
     [2, "When was the last leap year?"]
 ];
 
-let notStarted = true;
-function start(action) {
-    if(action == 0) {
-        problems.innerHTML = `<div class=\"bold-text\">You cannot start this test yet. Contact your test proctors for help.</div>`;
-    }else if(action == 1) {
-        showTest(test1);
-    }else {
-        problems.innerHTML = `<div class=\"bold-text\">System error. Contact your test proctors for help.</div>`;
-    }
-    
-}
+// for(let problem of test1) {
+//     let question = problem[1].toString();
+//     let encode = hexEncode(question);
+//     console.log(encode)
+//     console.log(hexDecode(question));
+// }
 
-function showTest(test) {
-    if(notStarted) {
-        for(let i = 0; i < test.length; i++) {
-            let problem = test[i];
-            problems.innerHTML += `
-            <div class=\"container problem\" id=\"problems\">
-                <div class=\"question bold-text\">${i + 1}. ${problem[0]}.00 points</div>
-                <div class=\"question-text\">${problem[1]}</div>
-            </div>`
-            notStarted = false;
-            buttonContainer.innerHTML = "";
-        }
-    }
-}
+console.log("hello".fromHex());
