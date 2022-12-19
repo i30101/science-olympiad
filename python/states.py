@@ -7,6 +7,7 @@ class States:
         self.getMembers()
         self.getRankings()
         self.summary()
+        self.exportRankings()
 
     def getMembers(self):
         with open(f"./raw/states.csv", "r") as file:
@@ -27,11 +28,21 @@ class States:
             # i is the index of the row element
             for i in range(len(row)):
                 for member in self.members:
-                    event = events[i]
-                    ranking = row[i]
-                    print(event, ranking)
-                    if event in member.events:
+                    if events[i] in member.events:
                         member.addRanking(events[i], int(row[i]))
+
+    def exportRankings(self):
+        f = open(f"./exports/states.csv", "w", newline = "")
+        writer = csv.writer(f)
+        f.truncate()
+        writer.writerows([
+            ["Member", "Georgia Invitational"],
+            ["","Event", "Ranking", "Sum"]
+        ])
+        for member in self.members:
+            for event in member.rankKeys:
+                writer.writerow([member.name, event, member.rankings[event], member.total])
+        f.close()
 
     def summary(self):
         for member in self.members:

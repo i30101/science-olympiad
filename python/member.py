@@ -5,12 +5,14 @@ class Member:
         self.events = []
         self.rankings = {}
         self.rankKeys = self.rankings.keys()
+        self.total = 0
 
     def addEvent(self, e):
         self.events.append(e)
 
     def addRanking(self, k, v):
         self.rankings[k] = v
+        self.total += v
 
     def getRankings(self):
         output = f"{self.name} has gotten the rankings: \n"
